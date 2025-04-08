@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat em Tempo Real</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker-element/1.18.4/index.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker-element/1.18.4/index.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Tela de Login -->
+    <div id="login-screen" class="login-container">
+      <h2>Entre no Chat</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Seu nome" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <!-- Tela de Chat -->
+    <div id="chat-screen" class="chat-container hidden">
+      <div class="chat-header">
+        <h2>Chat em Tempo Real</h2>
+        <span>Usuários online: <span id="user-count">0</span></span>
+      </div>
+      <div class="chat-area">
+        <div class="users-list">
+          <h3>Usuários Online</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="messages-area">
+          <div id="messages" class="messages"></div>
+          <div id="typing-status"></div>
+          <form id="message-form">
+            <div class="message-input-container">
+              <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+              <div class="message-actions">
+                <button type="button" id="emoji-button" class="icon-button">
+                  <i class="fas fa-smile"></i>
+                </button>
+                <label for="file-upload" class="icon-button">
+                  <i class="fas fa-image"></i>
+                </label>
+                <input id="file-upload" type="file" accept="image/*" style="display: none">
+              </div>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="emoji-picker-container" class="hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
