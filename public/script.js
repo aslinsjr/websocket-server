@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Conexão com o Socket.IO - isto funciona tanto localmente quanto no Glitch
     const socket = io();
     
     // Elementos do DOM

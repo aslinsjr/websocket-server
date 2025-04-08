@@ -1,15 +1,24 @@
 {
-  "name": "websocket-server",
+  "name": "websocket-chat",
   "version": "1.0.0",
+  "description": "Chat em tempo real com Socket.io, emojis e upload de imagens",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [
+    "chat",
+    "websocket",
+    "socket.io",
+    "emoji",
+    "upload"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "socket.io": "^4.8.1"
